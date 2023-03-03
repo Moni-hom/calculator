@@ -40,16 +40,6 @@ margin-right: 10px;
 
 }
 
-.form__amout {
-    padding: 5px;
-    min-width: 100px;
-    width: 60%;
-}
-
-.form__currency {
-    padding: 5px;
-}
-
 .form__button {
     background-color: rgba(1, 112, 88, 0.404);
     border-radius: 3px;
