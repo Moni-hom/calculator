@@ -13,6 +13,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
+    <link href="css/backgroundImage.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
@@ -20,11 +21,11 @@
 </head>
 
 <body class="body">
-    <header class="header"> $ Kalkulator walutowy $</header>
+    <div class="backgroundImage">
     <div class="container">
         <form class="form js-form">
             <fieldset class="form__fieldset">
-                <legend class="form__legend">Przelicznik</legend>
+                <legend class="form__legend">$ Kalkulator walutowy $</legend>
                 <p>
                     <label>
                         <span class="form__labelText">Kwota do przeliczenia w PLN:*</span>
@@ -46,14 +47,12 @@
                     <button class="form__button">Przelicz</button>
                 </p>
                 <p class="form__result">Otrzymasz z PLN: <span class="js-result">...</span></p>
+                <p class="information">*minimalna kwota 5 PLN</p>
             </fieldset>
-            <p>*minimalna kwota 5 PLN</p>
+            
         </form>
     </div>
-    <div class="footer">
-        <footer>© 2022 Monika Homola | All rights reserved</footer>
     </div>
-    
 </body>
 
 </html>
