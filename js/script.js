@@ -1,21 +1,22 @@
 {
-    const calculateResult = (amout, currency) => {
+    const calculateResult = (amount, currency) => {
         const rateEUR = 4.75;
         const rateUSD = 3.9;
         const rateCHF = 4.73;
 
         switch (currency) {
             case "EUR":
-                return amout / rateEUR;
+                return amount / rateEUR;
             case "USD":
-                return amout / rateUSD;
+                return amount / rateUSD;
             case "CHF":
-                return amout / rateCHF;
+                return amount / rateCHF;
         }
     };
 
     const updateResultText = (result, currency) => {
         const resultElement = document.querySelector(".js-result");
+        
         resultElement.innerText = `${result.toFixed(2)} ${currency}`;
         
     }
@@ -23,13 +24,13 @@
     const onFormSubmit = (even) => {
         even.preventDefault();
 
-        const amoutElement = document.querySelector(".js-amout");
+        const amountElement = document.querySelector(".js-amount");
         const currencyElement = document.querySelector(".js-currency");
 
-        const amout = +amoutElement.value;
+        const amount = +amountElement.value;
         const currency = currencyElement.value;
 
-        const result = calculateResult(amout, currency);
+        const result = calculateResult(amount, currency);
 
         updateResultText(result, currency);
     };
@@ -37,7 +38,7 @@
     const init = () => {
         const formElement = document.querySelector(".js-form");
 
-        formElement.addEventListener("submit",onFormSubmit);
+        formElement.addEventListener("submit", onFormSubmit);
     };
 
     init();
